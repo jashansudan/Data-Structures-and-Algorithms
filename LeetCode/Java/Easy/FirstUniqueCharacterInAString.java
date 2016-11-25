@@ -18,10 +18,7 @@ public class FirstUniqueCharacterInAString {
 				return j;
 			}
 		}
-		
-		
-		
-		return 0;
+		return -1;
 	}
 
 }
