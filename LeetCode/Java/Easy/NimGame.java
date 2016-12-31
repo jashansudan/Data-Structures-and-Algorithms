@@ -7,6 +7,7 @@ public class NimGame {
 		Scanner scan = new Scanner(System.in);
 		int stones = scan.nextInt();
 		nimGame(stones);
+		scan.close();
 	}
 	
 	public static boolean nimGame(int stones){
