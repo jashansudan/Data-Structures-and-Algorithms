@@ -2,11 +2,12 @@ class Solution(object):
     def findRadius(self, houses, heaters):
         houses.sort()
         heaters.sort()
-        i = result = 0
+
+        i, maxDistance = 0, 0
         for house in houses:
             while (i < len(heaters) - 1 and
-                   heaters[i] + heaters[i + 1] <=
-                   house * 2):
+                    abs(heaters[i] - house) >= abs(heaters[i + 1] - house)):
                 i += 1
-            result = max(result, abs(heaters[i], house))
-        return result
+            maxDistance = max(maxDistance, abs(heaters[i] - house))
+
+        return maxDistance
