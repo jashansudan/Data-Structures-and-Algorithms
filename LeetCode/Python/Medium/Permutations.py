@@ -18,5 +18,7 @@ class Solution(object):
                 continue
 
             visited[i] = True
-            self.permutations(nums, result, curr + [i], visited)
+            self.permutations(nums, result, curr + [nums[i]], visited)
             visited[i] = False
+
+        return

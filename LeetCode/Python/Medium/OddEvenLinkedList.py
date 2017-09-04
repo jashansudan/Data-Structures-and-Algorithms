@@ -16,6 +16,7 @@ class Solution(object):
         if even.next is not None:
             odd.next = even.next
             odd = odd.next
+            even.next = None
 
         odd.next = evenHead
 
