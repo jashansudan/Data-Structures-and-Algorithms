@@ -9,12 +9,11 @@ class Solution(object):
         if target == 0:
             result.append(curr)
             return
+        if target < 0:
+            return
 
         for i in range(index, len(candidates)):
             if i > index and candidates[i] == candidates[i - 1]:
                 continue
 
-            if candidates[i] > target:
-                break
-            self.combinationHelper(candidates, i + 1, curr + [candidates[i]],
-                                   result, target - candidates[i])
+            self.combinationHelper(candidates, target - candidates[i], result, i + 1, curr + [candidates[i]])
